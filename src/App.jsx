@@ -8,17 +8,17 @@ function CampusPeLogo() {
       <div className="relative flex items-center leading-none">
         {/* Exact Mortarboard icon perched on top of C */}
         <svg
-          className="w-7 h-7 text-[#0066FF] -mr-1"
+          className="w-8 h-8 text-[#0066FF] -mr-1"
           viewBox="0 0 24 24"
           fill="currentColor"
         >
           <path d="M12 2L1 8l11 6 9-4.91V16h2V8L12 2z M5 12.18v4L12 20l7-3.82v-4L12 16l-7-3.82z" />
         </svg>
-        <span className="text-[26px] font-extrabold tracking-tight text-[#0066FF] font-sans">
+        <span className="text-[28px] font-black tracking-tight text-[#0066FF] font-sans">
           Campus<span className="text-[#0052CC]">Pe</span>
         </span>
       </div>
-      <span className="text-[7.5px] font-medium text-gray-400 tracking-wider -mt-0.5">
+      <span className="text-[8px] font-semibold text-gray-500 tracking-wider -mt-0.5">
         Connecting Students, Institutions &amp; Companies
       </span>
     </div>
@@ -76,8 +76,8 @@ const roleCards = [
   },
   {
     title: "I'm Looking for a Job",
-    status: "Available Now",
-    statusType: "available",
+    status: "Coming Soon",
+    statusType: "coming",
     description: "Upload your resume. We'll find jobs that fit you.",
     features: ["Jobs from 1000+ sources", "AI powered matching", "WhatsApp & email alerts"],
     cta: "Explore Jobs",
@@ -407,7 +407,7 @@ export default function App() {
             </div>
           </div>
 
-          {/* 3 Core Role Cards - Uniform Styling */}
+          {/* 3 Core Role Cards - Uniform Appearance matching Figma */}
           <div className="role-grid">
             {roleCards.map((card, idx) => (
               <article key={idx} className="role-card">
@@ -418,8 +418,7 @@ export default function App() {
                       {card.artworkType === "job" && "🎓"}
                       {card.artworkType === "hiring" && "💼"}
                     </div>
-                    <span className={`status-pill ${card.statusType === "available" ? "available" : ""}`}>
-                      {card.statusType === "available" && <span className="ping-dot" />}
+                    <span className="status-pill">
                       {card.status}
                     </span>
                   </div>
@@ -508,6 +507,64 @@ export default function App() {
               <div className="stat-text">
                 <strong>100%</strong>
                 <span>Safe &amp; Trusted</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Partners Strip with Increased Scale Matching Figma */}
+        <section className="partners">
+          <p>Trusted by partners across India</p>
+          <div className="partner-logos" style={{ transform: "scale(1.35)", transformOrigin: "center", margin: "24px 0 32px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+              <div style={{ position: "relative", width: 42, height: 42 }}>
+                <span style={{ position: "absolute", width: 28, height: 28, borderRadius: "50%", background: "#00A3E0", opacity: 0.9, left: 0, top: 0 }} />
+                <span style={{ position: "absolute", width: 22, height: 22, borderRadius: "50%", background: "#0082c8", opacity: 0.9, right: 0, bottom: 0 }} />
+              </div>
+              <div style={{ textAlign: "left", lineHeight: 1 }}>
+                <span style={{ fontWeight: 900, fontSize: 26, color: "#00A3E0" }}>GINSERV</span>
+                <span style={{ display: "block", fontSize: 11, color: "#6B7280" }}>Nurturing Ventures</span>
+              </div>
+            </div>
+
+            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+              <svg width="52" height="38" viewBox="0 0 48 36" fill="#F05A28">
+                <polygon points="0,22 18,10 40,2 26,16 48,16 12,34 18,22" />
+              </svg>
+              <div style={{ textAlign: "left", lineHeight: 1.1, color: "#1A264F" }}>
+                <span style={{ fontWeight: 900, fontSize: 20, display: "block" }}>STARTUP</span>
+                <span style={{ fontWeight: 800, fontSize: 14, letterSpacing: 1.2 }}>KARNATAKA</span>
+              </div>
+            </div>
+
+            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              <div style={{ width: 42, height: 42, borderRadius: "50%", border: "1.5px solid #D97706", display: "flex", alignItems: "center", justifyContent: "center", background: "#FEF3C7" }}>
+                🏛️
+              </div>
+              <div style={{ textAlign: "left", lineHeight: 1 }}>
+                <span style={{ fontWeight: 900, fontSize: 17, color: "#1E293B", display: "block" }}>IIM</span>
+                <span style={{ fontSize: 12, color: "#64748B", fontWeight: 700 }}>BANGALORE</span>
+              </div>
+            </div>
+
+            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              <span style={{ color: "#2E6B56", fontSize: 26 }}>✦</span>
+              <span style={{ fontWeight: 900, fontSize: 16, color: "#1F4337", letterSpacing: 1.2 }}>TALENTSPOTIFY</span>
+            </div>
+
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <span style={{ fontSize: 11, fontWeight: 900, color: "#E52320", transform: "rotate(-90deg)" }}>RADIANT</span>
+              <svg width="32" height="36" viewBox="0 0 24 28" fill="#E52320">
+                <path d="M12 0C12 7 20 10 20 17a8 8 0 1 1-16 0c0-6 6-9 7-14l1-3z" />
+                <path d="M12 12c-2.5 0-4 1.8-4 4a4 4 0 0 0 8 0c0-2.2-1.5-4-4-4z" fill="#FFF" />
+              </svg>
+            </div>
+
+            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              <span style={{ fontSize: 24 }}>🏛️</span>
+              <div style={{ textAlign: "left", lineHeight: 1 }}>
+                <span style={{ fontWeight: 900, fontSize: 19, color: "#111827", display: "block" }}>Digital India</span>
+                <span style={{ fontSize: 12, color: "#EA580C", fontWeight: 800 }}>#PowerToEmpower</span>
               </div>
             </div>
           </div>
@@ -880,7 +937,7 @@ export default function App() {
           </div>
 
           <div className="phone-gallery" style={{ alignItems: "center", minHeight: 520 }}>
-            {/* Phone 1: Left */}
+            {/* Phone 1: Left Screen Screenshot */}
             <div className="side-phone left" style={{ overflow: "hidden", padding: 0, width: 210, height: 420 }}>
               <img
                 src="/campuspe/phone-left.png"
@@ -888,7 +945,9 @@ export default function App() {
                 style={{ width: "100%", height: "100%", objectFit: "contain" }}
                 onError={(e) => {
                   e.currentTarget.style.display = "none";
-                  e.currentTarget.nextElementSibling.style.display = "block";
+                  if (e.currentTarget.nextElementSibling) {
+                    e.currentTarget.nextElementSibling.style.display = "block";
+                  }
                 }}
               />
               <div className="side-phone-inner light-theme" style={{ display: "none" }}>
@@ -899,7 +958,7 @@ export default function App() {
               </div>
             </div>
 
-            {/* Phone 2: Left-Center */}
+            {/* Phone 2: Left-Center Screen Screenshot */}
             <div className="side-phone left" style={{ overflow: "hidden", padding: 0, width: 230, height: 460, transform: "rotate(-2deg) scale(0.98)" }}>
               <img
                 src="/campuspe/phone-left-center.png"
@@ -967,7 +1026,7 @@ export default function App() {
               </div>
             </div>
 
-            {/* Phone 4: Right-Center */}
+            {/* Phone 4: Right-Center Screen Screenshot */}
             <div className="side-phone right" style={{ overflow: "hidden", padding: 0, width: 230, height: 460, transform: "rotate(2deg) scale(0.98)" }}>
               <img
                 src="/campuspe/phone-right-center.png"
@@ -979,7 +1038,7 @@ export default function App() {
               />
             </div>
 
-            {/* Phone 5: Right */}
+            {/* Phone 5: Right Screen Screenshot */}
             <div className="side-phone right" style={{ overflow: "hidden", padding: 0, width: 210, height: 420 }}>
               <img
                 src="/campuspe/phone-right.png"
@@ -987,7 +1046,9 @@ export default function App() {
                 style={{ width: "100%", height: "100%", objectFit: "contain" }}
                 onError={(e) => {
                   e.currentTarget.style.display = "none";
-                  e.currentTarget.nextElementSibling.style.display = "block";
+                  if (e.currentTarget.nextElementSibling) {
+                    e.currentTarget.nextElementSibling.style.display = "block";
+                  }
                 }}
               />
               <div className="side-phone-inner blue-theme" style={{ display: "none" }}>
@@ -1007,7 +1068,7 @@ export default function App() {
             <i />
           </div>
 
-          {/* Download App Row with Tilted Dual-Phone Mockup */}
+          {/* Download App Row with Tilted Dual-Phone Mockup from Design */}
           <div className="download-row">
             <div>
               <h3>Download App Now</h3>
@@ -1032,7 +1093,7 @@ export default function App() {
               </div>
             </div>
 
-            {/* Tilted Dual Phone Artwork from Design */}
+            {/* Tilted Dual Phone Artwork from Design Screenshot */}
             <div style={{ display: "flex", justifyContent: "center", alignItems: "center", position: "relative", height: 260 }}>
               <div style={{
                 position: "absolute",
@@ -1112,7 +1173,7 @@ export default function App() {
         </section>
       </main>
 
-      {/* Footer */}
+      {/* Footer with Policy Note Callout */}
       <footer className="site-footer" id="footer">
         <div className="footer-main">
           <div className="footer-brand">
